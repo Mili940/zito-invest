@@ -1,0 +1,61 @@
+{
+   "name": "your-project",
+   "description": "A WPGulp based project.",
+   "version": "0.0.1",
+   "repository": "ahmadawais/WPGulp",
+   "license": "MIT",
+   "devDependencies": {
+      "@babel/core": "^7.0.0",
+      "@babel/preset-env": "^7.12.1",
+      "@babel/register": "^7.0.0",
+      "beepbeep": "^1.2.2",
+      "browser-sync": "^2.11.1",
+      "eslint": "^7.12.0",
+      "eslint-config-wordpress": "^2.0.0",
+      "gulp": "^4.0.2",
+      "gulp-autoprefixer": "^7.0.1",
+      "gulp-babel": "^8.0.0",
+      "gulp-cache": "^1.0.2",
+      "gulp-concat": "^2.5.2",
+      "gulp-filter": "^6.0.0",
+      "gulp-imagemin": "^7.1.0",
+      "gulp-line-ending-corrector": "^1.0.1",
+      "gulp-merge-media-queries": "^0.2.1",
+      "gulp-notify": "^3.0.0",
+      "gulp-plumber": "^1.2.0",
+      "gulp-remember": "^1.0.1",
+      "gulp-rename": "^2.0.0",
+      "gulp-rtlcss": "^1.2.0",
+      "gulp-sass": "^5.1.0",
+      "gulp-sort": "^2.0.0",
+      "gulp-sourcemaps": "^3.0.0",
+      "gulp-uglify": "^3.0.0",
+      "gulp-uglifycss": "^1.0.6",
+      "gulp-wp-pot": "^2.0.7",
+      "gulp-zip": "^5.0.2",
+      "parcel": "^2.8.3"
+   },
+   "alias": {
+      "jquery": {
+         "global": "$"
+      }
+   },
+   "scripts": {
+      "js-custom": "parcel build assets/js/main.js --dist-dir ./dist/js --no-cache",
+      "dev": "gulp",
+      "zip": "gulp zip",
+      "styles": "gulp styles",
+      "images": "gulp images",
+      "js-vendors": "gulp vendorsJS",
+      "translate": "gulp translate",
+      "styles-rtl": "gulp stylesRTL",
+      "cache-clear": "gulp clearCache"
+   },
+   "dependencies": {
+      "babel": "^6.23.0",
+      "gulp-run": "^1.7.1",
+      "lightbox2": "^2.11.4",
+      "sass": "^1.77.1",
+      "slick-carousel": "^1.8.1"
+   }
+}
