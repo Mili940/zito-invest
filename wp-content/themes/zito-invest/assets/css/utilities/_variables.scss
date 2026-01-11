@@ -5,10 +5,11 @@
 $main-dark: #000;
 $main-font-color: $main-dark;
 $main-white: #fff;
-$gray: #67696b;
+$green-dark: #4fa935;
+$link-blue: #006AC1;
 
 /*Font Variables*/
-$primary-font: serif;
+$primary-font: 'Merriweather', 'serif';
 
 // Font Weight
 $font-weights: (
@@ -35,51 +36,51 @@ $main-line-height: 1.2em;
 $headers: (
   h1: (
     50px,
-    1,
+    1.2,
     map-get($font-weights, bold),
     $primary-font,
-    1em,
-    1em,
+    0,
+    0
   ),
   h2: (
     36px,
-    1,
+    1.2,
     map-get($font-weights, bold),
     $primary-font,
-    1em,
-    1em,
+    0,
+    0,
   ),
   h3: (
     24px,
-    1,
+    1.2,
     map-get($font-weights, bold),
     $primary-font,
-    1em,
-    1em,
+    0,
+    0,
   ),
   h4: (
     20px,
-    1,
+    1.2,
     map-get($font-weights, bold),
     $primary-font,
-    1em,
-    1em,
+    0,
+    0,
   ),
   h5: (
     18px,
-    1,
+    1.2,
     map-get($font-weights, bold),
     $primary-font,
-    1em,
-    1em,
+    0,
+    0,
   ),
   h6: (
     15px,
-    1,
+    1.2,
     map-get($font-weights, bold),
     $primary-font,
-    1em,
-    1em,
+    0,
+    0
   ),
 );
 /******************************************************************

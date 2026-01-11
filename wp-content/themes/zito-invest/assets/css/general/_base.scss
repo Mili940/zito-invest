@@ -16,9 +16,6 @@ body {
   &.menu-active {
     overflow-y: hidden;
   }
-  @include max-mq(767px) {
-    font-size: 18px;
-  }
   //   Headers
   @each $header, $sizes in $headers {
     #{$header} {
@@ -31,6 +28,11 @@ body {
       clear: both;
     }
   }
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.4s;
 }
 
 /*--------------------------------------------------------------

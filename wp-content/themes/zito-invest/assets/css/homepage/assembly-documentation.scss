@@ -1,12 +1,134 @@
-.assembly-documentation {
-  svg {
-    width: 32px;
-    height: 32px;
+.section-assembly-documentation {
+  padding: 50px 0;
+
+  .container {
+    max-width: 960px;
   }
-  .arrow-title {
+
+  @include max-mq(map-get($breakpoints, ipad)) {
+    padding: 25px 0;
+  }
+
+  &--wrapper {
     svg {
       width: 32px;
       height: 32px;
+    }
+    .arrow-title {
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+
+      svg {
+        width: 32px;
+        height: 32px;
+        transition: transform 0.4s ease;
+        transform: rotate(180deg);
+
+        @include max-mq(map-get($breakpoints, sm)) {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+
+    .assembly-documentation--contnet {
+      margin: 50px 0;
+
+       @include max-mq(map-get($breakpoints, ipad)) {
+         margin: 25px 0;
+       }
+
+      &.active {
+        .documents {
+          max-height: 1000px;
+        }
+
+        .arrow-title {
+          svg {
+            transform: rotate(0deg);
+          }
+        }
+      }
+    }
+
+    .title-wrapper {
+      display: flex;
+      gap: 20px;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+
+      @include max-mq(map-get($breakpoints, ipad)) {
+        align-items: flex-start;
+      }
+
+      @include max-mq(map-get($breakpoints, sm)) {
+        gap: 10px;
+      }
+
+      .title {
+        position: relative;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+
+        &::after {
+          position: absolute;
+          content: "";
+          width: 200px;
+          height: 2px;
+          background-color: $green-dark;
+          left: 0;
+          bottom: 0;
+
+           @include max-mq(map-get($breakpoints, sm)) {
+            width: 100px;
+           }
+        }
+
+        h2 {
+          font-size: 22px;
+
+          @include max-mq(map-get($breakpoints, sm)) {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+
+    .documents {
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.4s ease;
+
+      display: flex;
+      gap: 10px;
+      flex-direction: column;
+
+      .document {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+
+        @include max-mq(map-get($breakpoints, sm)) {
+          align-items: flex-start;
+          gap: 7px;
+        }
+
+        a {
+          color: $link-blue;
+          font-size: 14px;
+          line-height: 1.2;
+
+          &:hover {
+            color: $green-dark;
+          }
+        }
+
+        svg {
+          width: 20px;
+          height: 20px;
+        }
+      }
     }
   }
 }

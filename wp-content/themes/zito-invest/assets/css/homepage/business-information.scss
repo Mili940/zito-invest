@@ -1,19 +1,91 @@
 .section-business-information {
+  padding: 100px 0 25px;
+
+   @include max-mq(map-get($breakpoints, ipad)) {
+    padding: 50px 0 0;
+  }
+
   .icon {
     width: 32px;
     height: 32px;
+    margin-bottom: 20px;
   }
-}
 
-.documents {
-  svg {
-    width: 16px;
-    height: 16px;
+  .title {
+    position: relative;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 100px;
+      height: 2px;
+      background-color: $green-dark;
+      left: 0;
+      bottom: 0;
+
+      @include max-mq(map-get($breakpoints, sm)) {
+        width: 50px;
+      }
+    }
+
+    h2 {
+      font-size: 22px;
+
+      @include max-mq(map-get($breakpoints, sm)) {
+        font-size: 20px;
+      }
+    }
   }
-}
 
-h1,
-h2,
-h3 {
-  font-family: "Merriweather", serif;
+  .section-business-information--wrapper {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+
+    @include max-mq(map-get($breakpoints, sm)) {
+      flex-direction: column;
+    }
+
+    .business-information {
+      width: calc(50% - 15px);
+
+      @include max-mq(map-get($breakpoints, sm)) {
+        width: 100%;
+      }
+    }
+  }
+
+  .documents {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+
+    .document {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+
+      @include max-mq(map-get($breakpoints, sm)) {
+        align-items: flex-start;
+        gap: 7px;
+      }
+
+      a {
+        color: $link-blue;
+        font-size: 14px;
+        line-height: 1.2;
+
+        &:hover {
+          color: $green-dark;
+        }
+      }
+
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
 }
