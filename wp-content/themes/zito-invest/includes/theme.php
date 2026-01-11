@@ -79,3 +79,27 @@ function default_avatar($args, $user_data)
    }
    return $args;
 }
+
+/********************************
+ADD ADDITIONAL TOOLBAR SET TO ACF WYSIWYG
+ ********************************/
+if (function_exists('get_field')) {
+   add_filter('acf/fields/wysiwyg/toolbars', 'qd_toolbars');
+   function qd_toolbars($toolbars)
+   {
+      //INJECT/ADD AN OPTION INTO THE BASIC TOOLBAR
+      $toolbars['Basic'][1] = array_merge(array_slice($toolbars['Basic'][1], 0, 3, true), array('subscript', 'superscript'), array_slice($toolbars['Basic'][1], 3, null, true));
+
+      //FIND MORE INFO ABOUT THIS OPERATION AT http://www.advancedcustomfields.com/resources/customize-the-wysiwyg-toolbars/
+      // Add a new toolbar called "Very Simple"
+      // - this toolbar has only 1 row of buttons
+      $toolbars['Very Simple'] = [];
+      $toolbars['Simple'] = [];
+      $toolbars['Simple'][1] = array('bold', 'italic', 'underline', 'subscript', 'superscript', "link", 'forecolor');
+      $toolbars['Very Simple'][1] = ['formatselect', 'bold', 'italic', 'link'];
+
+
+      // return $toolbars - IMPORTANT!
+      return $toolbars;
+   }
+}

@@ -104,7 +104,7 @@ function zitoinvest_register_theme_social( $wp_customize ) {
 		$wp_customize->add_section( $social['section'] , array(
 			'title'    => __($social['label'],'zitoinvest'),
 			'panel'    => 'social_media',
-			'priority' => $$key
+			'priority' => $key
 		) );
 
 		// Add settings
