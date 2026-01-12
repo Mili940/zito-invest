@@ -1,9 +1,9 @@
 .section-assembly-documentation {
   padding: 50px 0;
 
-  .container {
-    max-width: 960px;
-  }
+  // .container {
+  //   max-width: 960px;
+  // }
 
   @include max-mq(map-get($breakpoints, ipad)) {
     padding: 25px 0;

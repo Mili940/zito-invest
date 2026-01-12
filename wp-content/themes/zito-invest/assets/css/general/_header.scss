@@ -1,0 +1,37 @@
+.site-header {
+  position: fixed;
+  z-index: 2222;
+  width: 100%;
+  padding: 10px 0;
+
+  .site-logo-description {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 70px;
+
+    // .site-logo {
+    //      @include max-mq(map-get($breakpoints, sm)) {
+    //         width: 85%;
+    //      }
+    // }
+
+    .link {
+      color: $main-white;
+
+      &:hover {
+        color: $green-dark;
+      }
+    }
+  }
+
+  &.scrolled {
+    background: #fff; // boja nakon hero sekcije
+    color: #000; // promeni boju teksta
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+    .link {
+      color: $main-dark;
+    }
+  }
+}

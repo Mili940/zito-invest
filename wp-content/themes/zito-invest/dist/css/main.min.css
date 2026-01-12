@@ -155,7 +155,7 @@ td,th{padding:10px;border:1px solid}
 #site-navigation .sub-menu a{width:200px}
 .menu-toggle{display:none;background-color:rgba(0,0,0,0);border:0;color:#000;float:right}
 .row{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;margin-left:-15px;margin-right:-15px}
-.container{width:100%;max-width:1240px;padding-left:15px;padding-right:15px;margin-left:auto;margin-right:auto}
+.container{width:100%;max-width:1030px;padding-left:15px;padding-right:15px;margin-left:auto;margin-right:auto}
 .col-xs,.col-xs-12,.col-xs-11,.col-xs-10,.col-xs-9,.col-xs-8,.col-xs-7,.col-xs-6,.col-xs-5,.col-xs-4,.col-xs-3,.col-xs-2,.col-xs-1{margin:0;clear:none;width:100%;max-width:100%;padding-left:15px;padding-right:15px}
 .col-sm,.col-sm-12,.col-sm-11,.col-sm-10,.col-sm-9,.col-sm-8,.col-sm-7,.col-sm-6,.col-sm-5,.col-sm-4,.col-sm-3,.col-sm-2,.col-sm-1{margin:0;clear:none;width:100%;max-width:100%;padding-left:15px;padding-right:15px}
 .col-md,.col-md-12,.col-md-11,.col-md-10,.col-md-9,.col-md-8,.col-md-7,.col-md-6,.col-md-5,.col-md-4,.col-md-3,.col-md-2,.col-md-1{margin:0;clear:none;width:100%;max-width:100%;padding-left:15px;padding-right:15px}
@@ -185,6 +185,12 @@ button,input[type=button],input[type=reset],input[type=submit]{color:#000;border
 .site-footer .footer-content a:hover{color:#4fa935}
 .site-footer .footer-content--contact{display:-webkit-box;display:-ms-flexbox;display:flex;gap:50px;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
 .site-footer .footer-content--logo img{display:block;margin-bottom:1em}
+.site-header{position:fixed;z-index:2222;width:100%;padding:10px 0}
+.site-header .site-logo-description{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center;gap:70px}
+.site-header .site-logo-description .link{color:#fff}
+.site-header .site-logo-description .link:hover{color:#4fa935}
+.site-header.scrolled{background:#fff;color:#000;-webkit-box-shadow:0 2px 10px rgba(0,0,0,.1);box-shadow:0 2px 10px rgba(0,0,0,.1)}
+.site-header.scrolled .link{color:#000}
 .slick-slider{position:relative;display:block;-webkit-box-sizing:border-box;box-sizing:border-box;-webkit-touch-callout:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-ms-touch-action:pan-y;touch-action:pan-y;-webkit-tap-highlight-color:rgba(0,0,0,0)}
 .slick-list{position:relative;overflow:hidden;display:block;margin:0;padding:0}
 .slick-list:focus{outline:0}
@@ -225,6 +231,13 @@ button,input[type=button],input[type=reset],input[type=submit]{color:#000;border
 .hamburger.is-active .hamburger-inner{-webkit-transform:translate3d(0,-10px,0) rotate(-45deg);transform:translate3d(0,-10px,0) rotate(-45deg);-webkit-transition-delay:.22s;transition-delay:.22s;-webkit-transition-timing-function:cubic-bezier(0.215,0.61,0.355,1);transition-timing-function:cubic-bezier(0.215,0.61,0.355,1)}
 .hamburger.is-active .hamburger-inner::after{top:0;opacity:0;-webkit-transition:top .2s cubic-bezier(0.33333,0,0.66667,0.33333),opacity .1s .22s linear;transition:top .2s cubic-bezier(0.33333,0,0.66667,0.33333),opacity .1s .22s linear}
 .hamburger.is-active .hamburger-inner::before{top:0;-webkit-transform:rotate(-90deg);transform:rotate(-90deg);-webkit-transition:top .1s .16s cubic-bezier(0.33333,0,0.66667,0.33333),-webkit-transform .13s .25s cubic-bezier(0.215,0.61,0.355,1);transition:top .1s .16s cubic-bezier(0.33333,0,0.66667,0.33333),-webkit-transform .13s .25s cubic-bezier(0.215,0.61,0.355,1);transition:top .1s .16s cubic-bezier(0.33333,0,0.66667,0.33333),transform .13s .25s cubic-bezier(0.215,0.61,0.355,1);transition:top .1s .16s cubic-bezier(0.33333,0,0.66667,0.33333),transform .13s .25s cubic-bezier(0.215,0.61,0.355,1),-webkit-transform .13s .25s cubic-bezier(0.215,0.61,0.355,1)}
+.section-hero{position:relative;overflow:hidden}
+.section-hero--wrapper{padding:200px 0 100px;z-index:2;position:relative;text-align:center;color:#fff}
+.section-hero h1{font-size:38px;font-weight:500}
+.section-hero .bg-image{position:absolute;inset:0;z-index:1}
+.section-hero .bg-image::after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.5)}
+.section-hero .bg-image--desktop{width:100%;height:100%}
+.section-hero .bg-image img{-o-object-fit:cover;object-fit:cover;display:block;width:100%;height:100%}
 .section-business-information{padding:100px 0 25px}
 .section-business-information .icon{width:32px;height:32px;margin-bottom:20px}
 .section-business-information .title{position:relative;padding-bottom:20px;margin-bottom:20px}
@@ -238,7 +251,6 @@ button,input[type=button],input[type=reset],input[type=submit]{color:#000;border
 .section-business-information .documents .document a:hover{color:#4fa935}
 .section-business-information .documents .document svg{width:20px;height:20px}
 .section-assembly-documentation{padding:50px 0}
-.section-assembly-documentation .container{max-width:960px}
 .section-assembly-documentation--wrapper svg{width:32px;height:32px}
 .section-assembly-documentation--wrapper .arrow-title{margin-bottom:20px;padding-bottom:20px}
 .section-assembly-documentation--wrapper .arrow-title svg{width:32px;height:32px;-webkit-transition:-webkit-transform .4s ease;transition:-webkit-transform .4s ease;transition:transform .4s ease;transition:transform .4s ease,-webkit-transform .4s ease;-webkit-transform:rotate(180deg);transform:rotate(180deg)}
@@ -378,7 +390,8 @@ button,input[type=button],input[type=reset],input[type=submit]{color:#000;border
 .section-assembly-documentation{padding:25px 0}
 .section-assembly-documentation--wrapper .assembly-documentation--contnet{margin:25px 0}
 .section-assembly-documentation--wrapper .title-wrapper{-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start}
-}@media(max-width:767px){.section-business-information .title::after{width:50px}
+}@media(max-width:767px){.section-hero h1{font-size:28px}
+.section-business-information .title::after{width:50px}
 .section-business-information .title h2{font-size:20px}
 .section-business-information .section-business-information--wrapper{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}
 .section-business-information .section-business-information--wrapper .business-information{width:100%}
